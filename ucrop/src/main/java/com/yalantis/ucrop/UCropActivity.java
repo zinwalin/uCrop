@@ -320,6 +320,7 @@ public class UCropActivity extends AppCompatActivity {
             mLayoutScale = findViewById(R.id.layout_scale_wheel);
 
             setupAspectRatioWidget(intent);
+            setupTextButtons();
             setupRotateWidget();
             setupScaleWidget();
             setupStatesWrapper();
@@ -509,6 +510,21 @@ public class UCropActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rotateByAngle(90);
+            }
+        });
+    }
+
+    private void setupTextButtons() {
+        findViewById(R.id.cancel_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        findViewById(R.id.done_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cropAndSaveImage();
             }
         });
     }

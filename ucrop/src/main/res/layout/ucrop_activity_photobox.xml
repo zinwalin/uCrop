@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/ucrop_color_toolbar"
-        android:minHeight="?attr/actionBarSize">
+        android:minHeight="?attr/actionBarSize"
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/toolbar_title"
